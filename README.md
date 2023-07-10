@@ -1,8 +1,7 @@
 <h1 align="center">
     Vitex
-    <br/>
-    <div style="font-size: 10pt; font-weight: normal;">a vite js template</div>
 </h1>
+<p align="center">a vite js template</p>
 
 ## Prerequisites
 - Typescript >= 5.0.0
