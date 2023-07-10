@@ -6,7 +6,12 @@ export default defineConfig({
         environment: "jsdom",
         coverage: {
             provider: "istanbul",
-            reporter: ["html", "json", "text"]
-        }
+            reporter: ["html", "json", "text"],
+            include: ["**/*.[tj]s?(x)"],
+            exclude: ["src/router.ts", "src/main.tsx"],
+            all: true
+        },
+        reporters: ["junit"],
+        outputFile: "./coverage/junit.xml",
     }
 });
