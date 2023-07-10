@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
 import { User } from "../../../common/services/UserService"
+import { Link } from "../../../router";
 import "./ProfileCard.scss";
 
 type ProfileCardProps = {
@@ -10,7 +10,6 @@ export default function (props: ProfileCardProps) {
     const user = props.user;
     return (
         <>
-
             <table>
                 <tbody>
                     <tr><td>ID</td><td>{user.id}</td></tr>
@@ -21,7 +20,7 @@ export default function (props: ProfileCardProps) {
                 </tbody>
             </table>
 
-            <Link to={`/profile/${user.id+1}`}>Next</Link>
+            <Link to="/profile/:id" params={{ id: (user.id + 1).toString() }}>Next</Link>
         </>
     )
 }
