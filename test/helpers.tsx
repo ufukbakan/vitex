@@ -1,9 +1,16 @@
 import { render } from "@testing-library/react";
 import { ReactNode } from "react";
 import { BrowserRouter } from "react-router-dom";
+import { RecoilRoot } from "recoil";
 
-export function renderWithRouter(component: ReactNode) {
-    return render(<BrowserRouter >{component}</BrowserRouter>)
+export function renderWithProviders(component: ReactNode) {
+    return render(
+        <RecoilRoot>
+            <BrowserRouter >
+                {component}
+            </BrowserRouter>
+        </RecoilRoot>
+    )
 }
 
 let locationBackup: Location | null = null;
@@ -16,7 +23,7 @@ export function mockNavigation() {
     globalThis.window.location = newLocation(url);
 }
 
-function newLocation(url: URL): Location{
+function newLocation(url: URL): Location {
     return encapsulateHrefSetter(createLocationObjectFromUrl(url));
 }
 

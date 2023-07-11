@@ -1,11 +1,11 @@
 import { fireEvent } from "@testing-library/react";
 import Menu from "../../src/common/components/Menu";
-import { renderWithRouter } from "../helpers";
+import { renderWithProviders } from "../helpers";
 
 describe("Menu unit test", () => {
 
     test("Home link test", () => {
-        const container = renderWithRouter(<Menu />);
+        const container = renderWithProviders(<Menu />);
         const homeLink = container.queryByText("Home")!;
         expect(homeLink).to.be.not.null;
         fireEvent.click(homeLink);
@@ -13,7 +13,7 @@ describe("Menu unit test", () => {
     });
 
     test("About link test", () => {
-        const container = renderWithRouter(<Menu />);
+        const container = renderWithProviders(<Menu />);
         const aboutLink = container.queryByText("About")!;
         expect(aboutLink).to.be.not.null;
         fireEvent.click(aboutLink);
@@ -21,7 +21,7 @@ describe("Menu unit test", () => {
     });
 
     test("Profile link test", () => {
-        const container = renderWithRouter(<Menu />);
+        const container = renderWithProviders(<Menu />);
         const profileLink = container.queryByText("Profile")!;
         expect(profileLink).to.be.not.null;
         fireEvent.click(profileLink);
