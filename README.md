@@ -9,6 +9,8 @@
 
 ## What's inside
 - Vite.js <img height=15 src="https://vitejs.dev/logo.svg" />
+- React <img height=15 src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" />
+- Recoil <img height=15 src="https://seeklogo.com/images/R/recoil-icon-logo-9ED29C2C7B-seeklogo.com.png" />
 - Typescript <img height=15 src="https://cdn.worldvectorlogo.com/logos/typescript.svg" />
 - SWC <img height=15 src="https://swc.rs/logo.png" />
 - Generouted <img height=15 src="https://raw.githubusercontent.com/oedotme/generouted/main/logo.svg" />
