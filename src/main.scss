@@ -7,12 +7,19 @@ body {
         margin-bottom: 1rem;
     }
 
-    tr{
-        td{
+    tr {
+        td {
             padding-inline: 1rem;
         }
-        &:nth-child(even){
+
+        &:nth-child(even) {
             background-color: #eee;
+        }
+    }
+
+    label {
+        span {
+            margin-right: 1rem;
         }
     }
 }
