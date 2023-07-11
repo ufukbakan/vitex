@@ -11,7 +11,7 @@ export default defineConfig({
             exclude: ["src/router.ts", "src/main.tsx"],
             all: true
         },
-        reporters: ["junit"],
+        reporters: ["junit", "verbose"],
         outputFile: "./coverage/junit.xml",
     }
 });
