@@ -14,6 +14,7 @@
 - Generouted <img height=15 src="https://raw.githubusercontent.com/oedotme/generouted/main/logo.svg" />
 - Sass / Scss <img height=15 src="https://sass-lang.com/assets/img/logos/logo.svg" />
 - Vitest <img height=15 src="https://vitest.dev/logo.svg" />
+- Axios Mock Adapter <img height=15 src="https://avatars.githubusercontent.com/u/32372333?s=48&v=4">
 - Istanbul.js <img height=15 src="https://istanbul.js.org/assets/istanbul-logo.png" />
 - JUnit.xml, JSON & Html reporters 📄
 
