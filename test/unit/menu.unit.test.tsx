@@ -1,6 +1,6 @@
+import { fireEvent } from "@testing-library/react";
 import Menu from "../../src/common/components/Menu";
 import { renderWithRouter } from "../helpers";
-import { fireEvent } from "@testing-library/react";
 
 describe("Menu unit test", () => {
 

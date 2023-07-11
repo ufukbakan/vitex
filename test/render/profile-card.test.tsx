@@ -1,9 +1,9 @@
-import ProfileCard from "../../src/pages/profile/_components/ProfileCard"
-import { renderWithRouter } from "../helpers"
-import UserMock from "../mock-data/UserMock"
+import ProfileCard from "../../src/pages/profile/_components/ProfileCard";
+import { renderWithRouter } from "../helpers";
+import UserMock from "../mock-data/UserMock";
 
 test("Profile Card render test", () => {
-    const container = renderWithRouter(<ProfileCard user={UserMock} />)
+    const container = renderWithRouter(<ProfileCard user={UserMock} />);
 
     const textsExpected = [
         UserMock.id,
