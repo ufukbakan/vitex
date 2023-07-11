@@ -4,6 +4,7 @@ export default defineConfig({
     test: {
         globals: true,
         environment: "jsdom",
+        threads: true,
         coverage: {
             provider: "istanbul",
             reporter: ["html", "json", "text"],
