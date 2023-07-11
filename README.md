@@ -1,5 +1,7 @@
 <h1 align="center">
-    Vitex
+    <img height=40 src="public/vitex.svg">
+    ViteX
+    <img height=40 src="public/vitex.svg">
 </h1>
 <p align="center">a vite js template</p>
 
