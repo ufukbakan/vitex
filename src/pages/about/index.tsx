@@ -1,6 +1,6 @@
 import { useRecoilValue } from "recoil";
 import AboutInfo from "./_components/AboutInfo";
-import { globalInput } from "../../common/atoms/userPreferences.atom";
+import { globalInput } from "../../common/atoms/SessionPreferences.atom";
 
 export default function () {
 
@@ -13,7 +13,7 @@ export default function () {
             <AboutInfo />
 
             <label>
-                <span>Your recoil state:</span>
+                <span>Your readonly recoil state:</span>
                 <input disabled readOnly value={value} />
             </label>
         </>

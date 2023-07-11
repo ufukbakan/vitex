@@ -1,5 +1,5 @@
 import { useRecoilState } from "recoil"
-import { globalInput } from "../common/atoms/userPreferences.atom"
+import { globalInput } from "../common/atoms/SessionPreferences.atom"
 
 export default function () {
     const [value, setValue] = useRecoilState(globalInput);

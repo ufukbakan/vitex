@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useRecoilValue } from "recoil";
-import { globalInput } from "../../common/atoms/userPreferences.atom";
+import { globalInput } from "../../common/atoms/SessionPreferences.atom";
 import { User, userService } from "../../common/services/UserService";
 import { useParams } from "../../router";
 import ProfileCard from "./_components/ProfileCard";
@@ -33,7 +33,7 @@ export default function () {
 
     return (
         <>
-            <p>Your recoil state {recoilValue}</p>
+            <p>Your recoil state is {recoilValue}</p>
             {render()}
         </>
     )
