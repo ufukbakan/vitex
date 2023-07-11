@@ -9,7 +9,7 @@ export default defineConfig({
             provider: "istanbul",
             reporter: ["html", "json", "text"],
             include: ["**/*.[tj]s?(x)"],
-            exclude: ["src/router.ts", "src/main.tsx"],
+            exclude: ["src/router.ts", "src/main.tsx", "test/helpers.tsx"],
             all: true
         },
         reporters: ["junit", "verbose"],
