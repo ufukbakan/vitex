@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
-import { useParams } from "../../router";
+import { useRecoilValue } from "recoil";
+import { globalInput } from "../../common/atoms/userPreferences.atom";
 import { User, userService } from "../../common/services/UserService";
+import { useParams } from "../../router";
 import ProfileCard from "./_components/ProfileCard";
 
 export default function () {
@@ -9,9 +11,12 @@ export default function () {
 
     const [error, setError] = useState<string>();
     const [userInfo, setUserInfo] = useState<User>();
+    const recoilValue = useRecoilValue(globalInput);
 
     useEffect(() => {
-
+        if(userInfo){
+            setUserInfo(undefined);
+        }
         if (Number.isInteger(id)) {
             userService.fetchUserById(id).then(setUserInfo).catch(e => setError(e.message));
         } else {
@@ -26,6 +31,11 @@ export default function () {
         return result || <div>Loading...</div>;
     }
 
-    return render();
+    return (
+        <>
+            <p>Your recoil state {recoilValue}</p>
+            {render()}
+        </>
+    )
 
 }
