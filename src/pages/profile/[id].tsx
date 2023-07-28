@@ -14,9 +14,7 @@ export default function () {
     const recoilValue = useRecoilValue(globalInput);
 
     useEffect(() => {
-        if(userInfo){
-            setUserInfo(undefined);
-        }
+        reset();
         if (Number.isInteger(id)) {
             userService.fetchUserById(id).then(setUserInfo).catch(e => setError(e.message));
         } else {
@@ -25,9 +23,13 @@ export default function () {
 
     }, [userIdInPath]);
 
+    function reset(){
+        setUserInfo(undefined);
+        setError(undefined);
+    }
 
     function render() {
-        const result = error || userInfo && <ProfileCard user={userInfo} />;
+        const result = error || (userInfo && <ProfileCard user={userInfo} />);
         return result || <div>Loading...</div>;
     }
 
